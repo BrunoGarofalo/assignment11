@@ -2,9 +2,9 @@ name: CI/CD
 
 on:
   push:
-    branches: [ model_features ]
+    branches: [ schema_features ]
   pull_request:
-    branches: [ model_features ]
+    branches: [ schema_features ]
 
 jobs:
   test:
