@@ -99,8 +99,8 @@ jobs:
         with:
           push: true
           tags: |
-            BrunoGarofalo/assignment11:latest
-            BrunoGarofalo/assignment11:${{ github.sha }}
+            legioxi/assignment11:latest
+            legioxi/assignment11:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
-          cache-from: type=registry,ref=BrunoGarofalo/assignment11:cache
+          cache-from: type=registry,ref=legioxi/assignment11:cache
           cache-to: type=inline,mode=max
