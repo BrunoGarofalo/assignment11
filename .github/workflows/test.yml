@@ -28,7 +28,7 @@ jobs:
       
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.12'
           
       - uses: actions/cache@v3
         with:
@@ -53,14 +53,8 @@ jobs:
         run: |
           source venv/bin/activate
           
-          # 1) Unit tests
-          pytest tests/unit/ --cov=src --junitxml=test-results/junit.xml
-          
-          # 2) Integration tests
-          pytest tests/integration/
-          
-          # 3) E2E or other tests
-          pytest tests/e2e/
+          pytest tests/ --cov=app --cov-report=xml --cov-report=html --junitxml=test-results/junit.xml
+
 
   security:
     needs: test
