@@ -2,9 +2,9 @@ name: CI/CD
 
 on:
   push:
-    branches: [ e2e_features ]
+    branches: [ main ]
   pull_request:
-    branches: [ e2e_features ]
+    branches: [ main ]
 
 jobs:
   test:
